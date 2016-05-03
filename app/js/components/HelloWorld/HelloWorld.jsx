@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './HelloWorld.scss';
+
 class HelloWorld extends React.Component {
 	static defaultProps = {
 		whatever: '123'
@@ -11,7 +13,7 @@ class HelloWorld extends React.Component {
 
 	render() {
 		return (
-			<div>{this.props.name} Hello World!</div>
+			<div className="hello-world">{this.props.name} Hello World!</div>
 		);
 	}
 }

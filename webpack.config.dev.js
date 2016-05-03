@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var autoprefixer = require('autoprefixer');
 
 var __dirbuild = path.resolve(__dirname, 'dist');
 var __dirnodemodules = path.resolve(__dirname, 'node_modules');
@@ -30,6 +31,9 @@ module.exports = {
 			include: __dirscripts,
 			test: /\.jsx?$/,
 			loaders: ['react-hot', 'babel']
+		}, {
+			test: /\.(css|scss)$/,
+			loaders: ['style', 'css?sourceMap', 'postcss', 'sass?sourceMap']
 		}]
 	},
 	plugins: [
@@ -38,7 +42,10 @@ module.exports = {
 		new webpack.DefinePlugin({
       'process.env': {NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development') }
     })
-	]
+	],
+  postcss: function() {
+    return [autoprefixer];
+  }
 };
 
 console.log('process.env.NODE_ENV:', process.env.NODE_ENV);
