@@ -1,0 +1,16 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $color-carrot;
+	color: white;
+
+	@include mq($from: tablet, $until: desktop) {
+		background-color: $color-green-sea;
+	}
+
+	@include mq($until: tablet) {
+		background-color: $color-peter-river;
+	}
+}

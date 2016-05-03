@@ -1,6 +1,17 @@
+@import '../../../styles/vendors/mq';
+
 .hello-world {
 	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-size: 5rem;
+
+	@include mq($from: tablet, $until: desktop) {
+		font-size: 3rem;
+	}
+
+	@include mq($until: tablet) {
+		font-size: 2rem;
+	}
 }
