@@ -1,6 +1,10 @@
 import React from 'react';
 
 class HelloWorld extends React.Component {
+	static defaultProps = {
+		whatever: '123'
+	};
+
 	constructor(props) {
 		super(props)
 	}
