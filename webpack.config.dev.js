@@ -34,6 +34,13 @@ module.exports = {
 		}, {
 			test: /\.(css|scss)$/,
 			loaders: ['style', 'css?sourceMap', 'postcss', 'sass?sourceMap']
+		}, {
+			include: __dirimage,
+			test: /\.(jpe?g|png|gif|svg)$/,
+			loaders: [
+				'url-loader?name=img/[hash].[ext]&limit=8192',
+				'image-webpack-loader?bypassOnDebug=true&optimizationLevel=7'
+			]
 		}]
 	},
 	plugins: [

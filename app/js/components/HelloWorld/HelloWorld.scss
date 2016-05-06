@@ -4,14 +4,26 @@
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	font-size: 5rem;
+	justify-content: space-around;
+	font-size: 2.5rem;
+
+	> img {
+		width: 50%;
+	}
 
 	@include mq($from: tablet, $until: desktop) {
-		font-size: 3rem;
+		flex-direction: column;
+		font-size: 2rem;
 	}
 
 	@include mq($until: tablet) {
-		font-size: 2rem;
+		> img {
+			width: 60%;
+		}
+	}
+
+	@include mq($until: tablet) {
+		flex-direction: column;
+		font-size: 1.5rem;
 	}
 }

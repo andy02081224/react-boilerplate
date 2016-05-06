@@ -2,9 +2,11 @@ import React from 'react';
 
 import './HelloWorld.scss';
 
+import imgSrc from '../../../img/test.jpg';
+
 class HelloWorld extends React.Component {
 	static defaultProps = {
-		whatever: '123'
+		name: 'ABC'
 	};
 
 	constructor(props) {
@@ -13,7 +15,10 @@ class HelloWorld extends React.Component {
 
 	render() {
 		return (
-			<div className="hello-world">{this.props.name} Hello World!</div>
+			<div className="hello-world">
+				<h1>Hello, {this.props.name}</h1>
+				<img src={imgSrc} alt=""/>
+			</div>
 		);
 	}
 }
