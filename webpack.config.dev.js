@@ -26,7 +26,11 @@ module.exports = {
 		filename: '[name].bundle.js'
 	},
 	module: {
-		preLoaders: [],
+		preLoaders: [{
+			include: __dirscripts,
+			test: /\.(js|jsx)$/,
+			loaders: ['eslint']
+		}],
 		loaders: [{
 			include: __dirscripts,
 			test: /\.jsx?$/,
@@ -56,6 +60,9 @@ module.exports = {
 	],
   postcss: function() {
     return [autoprefixer];
+  },
+  eslint: {
+    configFile: './.eslintrc'
   }
 };
 

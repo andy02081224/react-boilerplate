@@ -5,8 +5,8 @@ import './HelloWorld.scss';
 import imgSrc from '../../../img/test.jpg';
 
 class HelloWorld extends React.Component {
-	static defaultProps = {
-		name: 'ABC'
+	static propTypes = {
+		name: React.PropTypes.string
 	};
 
 	constructor(props) {
