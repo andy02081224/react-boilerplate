@@ -4,7 +4,7 @@ var config = require('./webpack.config.dev');
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
-  contentBase: "dist/",
+  contentBase: "app/",
   hot: true,
   noInfo: true,
   historyApiFallback: true
