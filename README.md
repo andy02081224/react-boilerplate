@@ -33,8 +33,8 @@ app/
  |__ js/
  |    |__ app.js 
  |    |__ components/
- |    |    |__ Component1/
- |    |    |__ Component2/
+ |         |__ Component1/
+ |         |__ Component2/
  |__ styles/
       |__ helpers/
       |__ vendors/
